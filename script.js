@@ -1,7 +1,7 @@
 // --- Data dasar untuk masing-masing kelas ---
 const dataKelas = {
   IPA: {
-    kebutuhan: ["Buku catatan", "LKS", "Alat tulis", "Seragam sekolah"],
+    kebutuhan: ["Buku catatan", "LKS", "Alat tulis", "Seragam Sekolah"],
     pr: [
       "PPKN: Membuat biografi PPKN.",
       "Matematika Wajib: Mengerjakan halaman 50.",
@@ -9,30 +9,30 @@ const dataKelas = {
       "Bahasa Indonesia: Membuat vlog berita."
     ],
     jadwal: [
-      "Senin: B. Inggris, PPKN, Sejarah, Mtk Lanjut, Seni Rupa.",
-      "Selasa: Mtk Lanjut, Fisika, B. Inggris, B. Indo, B. Arab, Informatika.",
+      "Senin: Bahasa Inggris, PPKN, Sejarah, Matematika Lanjut, Seni Rupa.",
+      "Selasa: Matematika Lanjut, Fisika, Bahasa Inggris, Bahasa Indo, Bahasa Arab, Informatika.",
       "Rabu: Penjas, Biologi, Fisika, Kemuhammadiyahan, PAI, Matematika.",
-      "Kamis: Fisika, Kimia, Matematika, B. Indo, PAI.",
-      "Jumat: Biologi, B. Jawa, BK, Kimia."
+      "Kamis: Fisika, Kimia, Matematika, Bahasa Indo, PAI.",
+      "Jumat: Biologi, Bahasa Jawa, BK, Kimia."
     ],
     ekstrakulikuler: ["Rabu: Double Track", "Kamis: Hizbul Wathan", "Jumat: Tapak Suci"],
     goals: ["“Jangan takut gagal, karena kegagalan adalah bagian dari perjalanan menuju sukses.” — B.J. Habibie"]
   },
   IPS: {
-    kebutuhan: ["Buku tulis", "LKS", "Alat tulis", "Seragam sekolah"],
+    kebutuhan: ["Buku Catatan", "LKS", "Alat tulis", "Seragam Sekolah"],
     pr: [
-      "Geografi: Mencari kata Polystichum Lemmoni.",
-      "Matematika: Mengerjakan tugas mandiri bab 2.",
-      "Seni Budaya: Membawa kanvas kecil.",
-      "Ekonomi: Membuat laporan neraca.",
-      "B. Jawa: Membuat sesorah pidato atau pranatacara.",
-      "B. Indonesia: Membuat vlog berita."
+      "Geografi: Mencari Kata Polystichum Lemmoni.",
+      "Matematika: Mengerjakan Tugas Mandiri Bab 2.",
+      "Seni Budaya: Membawa Kanvas Kecil.",
+      "Ekonomi: Membuat Laporan Neraca.",
+      "B. Jawa: Membuat Sesorah Pidato atau Pranatacara.",
+      "B. Indonesia: Membuat Vlog Berita."
     ],
     jadwal: [
-      "Senin: Geografi, Mtk, Seni Budaya, Ekonomi.",
-      "Selasa: B. Jawa, Sejarah, Kemuhammadiyahan, Informatika, Geografi, Ekonomi.",
-      "Rabu: Penjas, B. Arab, Biologi, BK.",
-      "Kamis: B. Inggris, B. Indo, PAI, Sosiologi.",
+      "Senin: Geografi, Matematika, Seni Budaya, Ekonomi.",
+      "Selasa: Bahasa Jawa, Sejarah, Kemuhammadiyahan, Informatika, Geografi, Ekonomi.",
+      "Rabu: Penjas, Bahasa Arab, Biologi, BK.",
+      "Kamis: Bahasa Inggris, Bahasa Indo, PAI, Sosiologi.",
       "Jumat: PAI, PPKN, Biologi, Sosiologi."
     ],
     ekstrakulikuler: ["Rabu: Double Track", "Kamis: Hizbul Wathan", "Jumat: Tapak Suci"],
@@ -70,7 +70,8 @@ function renderPage(nama, kelas) {
   main.innerHTML = `
     <div class="card">
       <h2>Halo, ${nama} dari kelas ${kelas} 💕</h2>
-      <p class="muted">Semangat untuk hari ini yaa!</p>
+      <p class="muted">💫Be your own kind of smart. Dengan Smart Day, semua jadwal, tugas, dan impianmu tersusun rapi biar kamu tetap produktif tanpa kehilangan vibe. 💫
+</p>
     </div>
     <div class="grid">
       ${renderListCard("📘 Kebutuhan Harian", "kebutuhan", data.kebutuhan)}
@@ -106,9 +107,16 @@ function renderMoodCard() {
     <div class="card" id="moodCard">
       <h2>💖 Perasaan Hari Ini</h2>
       <div class="mood-row">
-        <button class="mood-btn" data-mood="happy">😊 Senang</button>
-        <button class="mood-btn" data-mood="sad">😢 Sedih</button>
-        <button class="mood-btn" data-mood="flat">😐 Biasa aja</button>
+        <button class="mood-btn" data-mood="Happy">😊 Senang</button>
+        <button class="mood-btn" data-mood="Sad">😢 Sedih</button>
+        <button class="mood-btn" data-mood="Flat">😐 Biasa aja</button>
+        <button class="mood-btn" data-mood="Tired">😴 Capek</button>
+        <button class="mood-btn" data-mood="Loved">😍 Hati terasa hangat</button>
+        <button class="mood-btn" data-mood="Angry">😡 Marah</button>
+        <button class="mood-btn" data-mood="Confused">😕 Bingung</button>
+        <button class="mood-btn" data-mood="Excited">🤩 Sangat Bersemangat</button>
+        <button class="mood-btn" data-mood="Lonely">😔 Kesepian</button>
+        <button class="mood-btn" data-mood="Nervous">😬 Canggung</button>
       </div>
       <textarea id="reason" placeholder="Ceritain alasannya di sini..."></textarea>
       <button id="saveNote" class="primary" style="margin-top:10px;">Simpan Catatan</button>
